@@ -45,15 +45,17 @@ while True:
     print_board()
     player_move('x')
     print_board()
-    if win('x'):
-        print('x wins')
+    if victory('x'):
+        print('x won')
+        break
+    elif draw():
+        print('draw')
         break
     
-    player_move('y')
-    
-    if win('y'):
+    player_move('o')
+    if victory('y'):
         print_board()
-        print('y wins')
+        print('y won')
         break
     
     
