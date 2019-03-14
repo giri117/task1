@@ -27,3 +27,6 @@ class Current(Account):
 class Savings(Account):
     def __init__(self, name, balance):
         super().__init__(name, balance, min_balance=0)
+
+    def __str__(self):
+        return '''{}'s saving has rs{} balance'''.format(self.name, self.balance)
